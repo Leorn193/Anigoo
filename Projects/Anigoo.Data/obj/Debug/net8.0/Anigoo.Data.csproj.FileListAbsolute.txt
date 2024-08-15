@@ -1,0 +1,15 @@
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\bin\Debug\net8.0\Anigoo.Data.deps.json
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\bin\Debug\net8.0\Anigoo.Data.runtimeconfig.json
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\bin\Debug\net8.0\Anigoo.Data.dll
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\bin\Debug\net8.0\Anigoo.Data.pdb
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.csproj.AssemblyReference.cache
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.AssemblyInfoInputs.cache
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.AssemblyInfo.cs
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.csproj.CoreCompileInputs.cache
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.sourcelink.json
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.dll
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\refint\Anigoo.Data.dll
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.pdb
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\Anigoo.Data.genruntimeconfig.cache
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.Data\obj\Debug\net8.0\ref\Anigoo.Data.dll

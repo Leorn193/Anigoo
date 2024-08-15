@@ -90,6 +90,7 @@ BEGIN
 	CREATE TABLE Episodio(
 		Id_Episodio				INT	IDENTITY		NOT NULL,
 		Id_Anime				INT					NOT NULL,
+		Cd_Episodio				INT					NOT NULL,
 		Nm_Episodio				VARCHAR(200)		NOT NULL,
 		Ds_Sinopse				VARCHAR(MAX)		NOT NULL,
 		Cd_Temporada			VARCHAR(10)			NOT NULL,
@@ -101,4 +102,3 @@ BEGIN
 		CONSTRAINT FK_Id_EpisodioAnime	FOREIGN KEY (Id_Anime) REFERENCES Anime(Id_Anime),
 	);
 END
-

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "pYm2/YW6dv7NbGnq9SK1gQU3D51WrJOfndjAjY8BxRI=",
-  "Source": "Anigoo.API",
-  "BasePath": "_content/Anigoo.API",
+  "Hash": "hJ2L7NCUlyhKBmYg4vpcbkoOcEMjOwNWGniucUldqbw=",
+  "Source": "Anigoo.Api",
+  "BasePath": "_content/Anigoo.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
