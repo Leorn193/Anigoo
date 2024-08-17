@@ -15,7 +15,6 @@ IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Anime
 BEGIN
 	CREATE TABLE Anime(
 		Id_Anime			INT	IDENTITY		NOT NULL,
-		Id_Genero			INT					NOT NULL,
 		Nm_Anime			VARCHAR(300)		NOT NULL,
 		Nm_Autor			VARCHAR(300)		NOT NULL,
 		Qt_Episodios		INT					NOT NULL,
@@ -24,8 +23,21 @@ BEGIN
 		Qt_AnoEstreia		INT					NOT NULL,
 		Dt_Criacao			DATETIME			NOT NULL,
 		Fl_Ativo			BIT					NOT NULL,
-		CONSTRAINT PK_Id_Anime			PRIMARY KEY (Id_Anime),
-		CONSTRAINT FK_Id_AnimeGenero	FOREIGN KEY (Id_Genero) REFERENCES Genero(Id_Genero)
+		CONSTRAINT PK_Id_Anime PRIMARY KEY (Id_Anime),
+	);
+END
+
+IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'AnimeGenero')
+BEGIN
+	CREATE TABLE AnimeGenero(
+		Id_AnimeGenero		INT IDENTITY		NOT NULL,
+		Id_Anime			INT					NOT NULL,
+		Id_Genero			INT					NOT NULL,
+		Dt_Criacao			DATETIME			NOT NULL,
+		Fl_Ativo			BIT					NOT NULL,
+		CONSTRAINT PK_Id_AnimeGenero PRIMARY KEY (Id_AnimeGenero),
+		CONSTRAINT FK_Id_AnimeGeneroAnime FOREIGN KEY (Id_Anime) REFERENCES Anime(Id_Anime),
+		CONSTRAINT FK_Id_AnimeGeneroGenero FOREIGN KEY (Id_Genero) REFERENCES Genero(Id_Genero)
 	);
 END
 
