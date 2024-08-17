@@ -71,17 +71,17 @@ BEGIN
 END
 
 
-IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Favorito')
+IF NOT EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Avaliacao')
 BEGIN
-	CREATE TABLE Favorito(
-		Id_Favorito		INT	IDENTITY	NOT NULL,
+	CREATE TABLE Avaliacao(
+		Id_Avaliacao	INT	IDENTITY	NOT NULL,
 		Id_Anime		INT				NOT NULL,
 		Id_Usuario		INT				NOT NULL,
 		Dt_Criacao		DATETIME		NOT NULL,
 		Fl_Ativo		BIT				NOT NULL,
-		CONSTRAINT PK_Id_Favorito			PRIMARY KEY (Id_Favorito),
-		CONSTRAINT FK_Id_FavoritoAnime		FOREIGN KEY (Id_Anime)		REFERENCES Anime(Id_Anime),
-		CONSTRAINT FK_Id_FavoritoUsuario	FOREIGN KEY (Id_Usuario)	REFERENCES Usuario(Id_Usuario)
+		CONSTRAINT PK_Id_Avaliacao			PRIMARY KEY (Id_Avaliacao),
+		CONSTRAINT FK_Id_AvaliacaoAnime		FOREIGN KEY (Id_Anime)		REFERENCES Anime(Id_Anime),
+		CONSTRAINT FK_Id_AvaliacaoUsuario	FOREIGN KEY (Id_Usuario)	REFERENCES Usuario(Id_Usuario)
 	);
 END
 
