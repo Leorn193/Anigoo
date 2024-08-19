@@ -25,7 +25,6 @@ C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\ne
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Anigoo.API.props
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\scopedcss\bundle\Anigoo.API.styles.css
-C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\Anigoo.API.csproj.CopyComplete
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\Anigoo.API.dll
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\refint\Anigoo.API.dll
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\Anigoo.API.pdb
@@ -71,3 +70,4 @@ C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\ne
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Data.dll
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Data.pdb
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\Anigoo.Api.csproj.Up2Date

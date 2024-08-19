@@ -14,6 +14,8 @@ namespace Anigoo.Data.Models
         public bool Fl_Premium { get; set; }
         public DateTime Dt_Criacao { get; set; }
         public bool Fl_Ativo { get; set; }
-        public ICollection<Favorito> Favorito { get; set; }
+
+        //Relacionamento
+        public ICollection<Avaliacao> Avaliacao { get; set; }
     }
 }

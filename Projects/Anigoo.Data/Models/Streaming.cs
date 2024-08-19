@@ -9,6 +9,8 @@ namespace Anigoo.Data.Models
         public string Nm_Streaming { get; set; }
         public DateTime Dt_Criacao { get; set; }
         public bool Fl_Ativo { get; set; }
+
+        //Relacionamentos
         public ICollection<AnimeStreaming> AnimeStreaming { get; set; }
     }
 }

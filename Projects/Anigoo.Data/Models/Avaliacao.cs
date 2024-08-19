@@ -2,17 +2,18 @@
 
 namespace Anigoo.Data.Models
 {
-    public class AnimeStreaming
+    public class Avaliacao
     {
         [Key]
-        public int Id_AnimeStreaming { get; set; }
+        public int Id_Avaliacao { get; set; }
         public int Id_Anime { get; set; }
-        public int Id_Streaming { get; set; }
+        public int Id_Usuario { get; set; }
+        public decimal Vl_Avaliacao { get; set; }
         public DateTime Dt_Criacao { get; set; }
         public bool Fl_Ativo { get; set; }
 
-        //Relacionamento
+        //Relacionamentos
         public Anime Anime { get; set; }
-        public Streaming Streaming { get; set; }
+        public Usuario Usuario { get; set; }
     }
 }

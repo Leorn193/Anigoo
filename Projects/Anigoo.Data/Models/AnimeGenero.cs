@@ -2,15 +2,17 @@
 
 namespace Anigoo.Data.Models
 {
-    public class Favorito
+    public class AnimeGenero
     {
         [Key]
-        public int Id_Favorito { get; set; }
+        public int Id_AnimeGenero { get; set; }
         public int Id_Anime { get; set; }
-        public int Id_Usuario { get; set; }
+        public int Id_Genero { get; set; }
         public DateTime Dt_Criacao { get; set; }
         public bool Fl_Ativo { get; set; }
-        public virtual Anime Anime { get; set; }
-        public virtual Usuario Usuario { get; set; }
+
+        //Relacionamentos
+        public Anime Anime { get; set; }
+        public Genero Genero { get; set; }
     }
 }

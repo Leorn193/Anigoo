@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anigoo.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12fa559a64f8d0c170ff9c39e2ae1b4adfefbb4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anigoo.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anigoo.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

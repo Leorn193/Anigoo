@@ -9,5 +9,7 @@ namespace Anigoo.Data.Models
         public string Nm_Genero { get; set; }
         public DateTime Dt_Criacao { get; set; }
         public bool Fl_Ativo { get; set; }
+
+        public ICollection<AnimeGenero> AnimeGenero { get; set; }
     }
 }
