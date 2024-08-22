@@ -71,3 +71,8 @@ C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\ne
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Data.dll
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Data.pdb
 C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\obj\Debug\net8.0\Anigoo.Api.csproj.Up2Date
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Biz.dll
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Biz.pdb
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Entities.dll
+C:\Users\Leonardo Nunes\Desktop\Projetos\Anigoo\Projects\Anigoo.API\bin\Debug\net8.0\Anigoo.Entities.pdb

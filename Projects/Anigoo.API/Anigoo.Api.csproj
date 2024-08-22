@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Anigoo.Biz\Anigoo.Biz.csproj" />
     <ProjectReference Include="..\Anigoo.Data\Anigoo.Data.csproj" />
   </ItemGroup>
 

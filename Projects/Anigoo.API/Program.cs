@@ -1,12 +1,21 @@
+using Anigoo.Biz;
+using Anigoo.Biz.Interfaces;
+using Anigoo.Biz.Services;
 using Anigoo.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<AnimeService>();
 
+// Add repositorys
+builder.Services.AddScoped<IAnimeRepository, AnimeRepository>();
+builder.Services.AddScoped<IGeneroRepository, GeneroRepository>();
+builder.Services.AddScoped<IAnimeGeneroRepository, AnimeGeneroRepository>();
+
+// Add controllers
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
