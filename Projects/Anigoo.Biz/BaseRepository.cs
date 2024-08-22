@@ -135,7 +135,7 @@ namespace Anigoo.Biz
 
             if (PropriedadeExiste(query.FirstOrDefault(), "Fl_Ativo"))
             {
-                query = query.Where(x => EF.Property<bool>(x, "Fl_Ativo") == true).AsQueryable();
+                query = query.Where("Fl_Ativo == true").AsQueryable();
             }
 
             if (includeProperties != null)

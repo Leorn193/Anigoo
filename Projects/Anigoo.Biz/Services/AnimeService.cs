@@ -38,7 +38,8 @@ namespace Anigoo.Biz.Services
                 List<string> listaStreaming = new();
                 foreach (var animeStreaming in anime.AnimeStreaming)
                 {
-                    listaStreaming.Add(animeStreaming.Streaming.Nm_Streaming);
+                    if(animeStreaming.Fl_Ativo == true)
+                        listaStreaming.Add(animeStreaming.Streaming.Nm_Streaming);
                 }
 
                 //Acessa as avaliações do anime e calcula sua média
