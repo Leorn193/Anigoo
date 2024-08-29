@@ -2,7 +2,7 @@
 
 namespace Anigoo.Biz.Interfaces
 {
-    public interface IAnimeGeneroRepository : IBaseRepository<AnimeGenero>
+    public interface IUsuarioRepository : IBaseRepository<Usuario>
     {
     }
 }

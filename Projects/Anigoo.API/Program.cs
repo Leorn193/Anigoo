@@ -1,5 +1,5 @@
-using Anigoo.Biz;
 using Anigoo.Biz.Interfaces;
+using Anigoo.Biz.Repositorys;
 using Anigoo.Biz.Services;
 using Anigoo.Data;
 using Microsoft.EntityFrameworkCore;
@@ -8,11 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<AnimeService>();
+builder.Services.AddScoped<UsuarioService>();
 
 // Add repositorys
 builder.Services.AddScoped<IAnimeRepository, AnimeRepository>();
 builder.Services.AddScoped<IGeneroRepository, GeneroRepository>();
 builder.Services.AddScoped<IAnimeGeneroRepository, AnimeGeneroRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 // Add controllers
 builder.Services.AddControllers();

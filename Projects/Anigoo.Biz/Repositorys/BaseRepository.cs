@@ -5,7 +5,7 @@ using System.Linq.Dynamic.Core;
 using Microsoft.EntityFrameworkCore.Query;
 using System.Collections.Generic;
 
-namespace Anigoo.Biz
+namespace Anigoo.Biz.Repositorys
 {
     public abstract class BaseRepository<TContext, TEntidade> : IBaseRepository<TEntidade> where TContext : DbContext where TEntidade : class, new()
     {
@@ -25,7 +25,7 @@ namespace Anigoo.Biz
         {
             foreach (var entidade in entidades)
             {
-                if(!PropriedadeExiste(entidade, nomePropriedade))
+                if (!PropriedadeExiste(entidade, nomePropriedade))
                     return false;
             }
 
@@ -34,13 +34,13 @@ namespace Anigoo.Biz
 
         public virtual TEntidade Adicionar(TEntidade entidade)
         {
-            if ((PropriedadeExiste(entidade, "Fl_Ativo")) && PropriedadeExiste(entidade, "Dt_Criacao"))
+            if (PropriedadeExiste(entidade, "Fl_Ativo") && PropriedadeExiste(entidade, "Dt_Criacao"))
             {
                 ((dynamic)entidade).Fl_Ativo = true;
                 ((dynamic)entidade).Dt_Criacao = DateTime.Now;
 
                 _context.Set<TEntidade>().Add(entidade);
-                _context.Entry<TEntidade>((TEntidade)entidade).State = EntityState.Added;
+                _context.Entry(entidade).State = EntityState.Added;
 
                 return entidade;
             }
@@ -60,10 +60,10 @@ namespace Anigoo.Biz
         {
             TEntidade entidade = _context.Set<TEntidade>().Find(id);
 
-            if(PropriedadeExiste(entidade, "Fl_Ativo"))
+            if (PropriedadeExiste(entidade, "Fl_Ativo"))
             {
                 ((dynamic)entidade).Fl_Ativo = false;
-                _context.Entry<TEntidade>((TEntidade)entidade).State = EntityState.Modified;
+                _context.Entry(entidade).State = EntityState.Modified;
             }
 
             return entidade ?? new();
@@ -74,7 +74,7 @@ namespace Anigoo.Biz
             if (PropriedadeExiste(entidade, "Fl_Ativo"))
             {
                 ((dynamic)entidade).Fl_Ativo = false;
-                _context.Entry<TEntidade>((TEntidade)entidade).State = EntityState.Modified;
+                _context.Entry(entidade).State = EntityState.Modified;
             }
 
             return entidade ?? new();
@@ -92,10 +92,10 @@ namespace Anigoo.Biz
 
         public virtual TEntidade Editar(TEntidade entidade)
         {
-            if(PropriedadeExiste(entidade, "Fl_Ativo") && PropriedadeExiste(entidade, "Dt_Criacao"))
+            if (PropriedadeExiste(entidade, "Fl_Ativo") && PropriedadeExiste(entidade, "Dt_Criacao"))
             {
-                _context.Entry<TEntidade>((TEntidade)entidade).Property("Fl_Ativo").IsModified = false;
-                _context.Entry<TEntidade>((TEntidade)entidade).Property("Dt_Criacao").IsModified = false;
+                _context.Entry(entidade).Property("Fl_Ativo").IsModified = false;
+                _context.Entry(entidade).Property("Dt_Criacao").IsModified = false;
 
                 _context.Entry(entidade).State = EntityState.Modified;
 
@@ -104,7 +104,7 @@ namespace Anigoo.Biz
 
             return new();
         }
-        
+
         private IQueryable<TEntidade> Include(IQueryable<TEntidade> query, params Expression<Func<TEntidade, object>>[] includeProperties)
         {
             foreach (var property in includeProperties)
