@@ -1,0 +1,55 @@
+@import 'src/styles.scss';
+
+.cadastro
+{
+  color: $cor-secundaria;
+  border-radius: 0px 10px 10px 0px;
+}
+.campo input
+{
+
+  background-color: $cor-primaria;
+  color: $cor-secundaria;
+  padding: 10px;
+  padding-left: 50px;
+  border-radius: 20px;
+  width: 100%;
+}
+input
+{
+
+  background-color: $cor-primaria;
+  color: $cor-secundaria;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+input::placeholder
+{
+  color: $cor-placeholder;
+}
+.campo
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.mat-icon
+{
+  position: absolute;
+  left: 15px;
+  pointer-events: none;
+}
+.botao_cadastro
+{
+  background-color: $cor-primaria;
+  color: $cor-secundaria;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border:none;
+}
+.botao_cadastro:hover
+{
+  background-color: $cor-fundo;
+}

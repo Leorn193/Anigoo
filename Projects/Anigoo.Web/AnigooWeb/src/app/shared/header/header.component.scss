@@ -1,0 +1,19 @@
+@import 'src/styles.scss';
+
+.header
+{
+  color: $cor-secundaria
+}
+span
+{
+  cursor: pointer;
+}
+.mat-icon
+{
+  cursor: pointer;
+}
+.icone:hover
+{
+  background-color: $cor-fundo;
+  border-radius: 16px;
+}

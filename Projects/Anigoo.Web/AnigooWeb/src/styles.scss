@@ -1,0 +1,36 @@
+// Importa o reset.scss
+
+/* You can add global styles to this file, and also import other style files */
+
+//Cores Padrões
+$cor-fundo: #111111;
+$cor-primaria: #313131;
+$cor-secundaria: #f6f6f6;
+$cor-terciaria: #262626;
+$cor-placeholder: #aaaaaa;
+
+//Classes Padrões
+.bg-cinza-claro
+{
+  background-color: $cor-primaria;
+}
+.bg-cinza-escuro
+{
+  background-color: $cor-fundo;
+}
+.bg-cinza-medio
+{
+  background-color: $cor-terciaria;
+}
+.bg-claro
+{
+  background-color: $cor-secundaria;
+}
+.pointer
+{
+  cursor: pointer;
+}
+input
+{
+  border: none;
+}

@@ -1,0 +1,26 @@
+<section class="cadastro bg-cinza-medio d-flex flex-column p-4 h-100 gap-4 align-items-center">
+  <h1 class="d-flex justify-content-center">Criar Conta</h1>
+  <form [formGroup]="formularioCadastro" class="d-flex flex-column w-100 gap-4 ps-5 pe-5">
+    <div class="campo">
+      <mat-icon>face</mat-icon>
+      <input formControlName="nome" type="text" placeholder="Nome Completo">
+    </div>
+    <div class="campo">
+      <mat-icon>account_circle</mat-icon>
+      <input formControlName="nomeUsuario" type="text" placeholder="Nome Usuário">
+    </div>
+    <div class="campo">
+      <mat-icon>alternate_email</mat-icon>
+      <input formControlName="email" type="text" placeholder="Email">
+    </div>
+    <div class="campo">
+      <mat-icon>call</mat-icon>
+      <input formControlName="telefone" type="text" placeholder="Telefone">
+    </div>
+  <div class="d-flex gap-4 w-100">
+    <input formControlName="senha" class="w-50" type="password" placeholder="Senha">
+    <input formControlName="confirmarSenha" class="w-50" type="password" placeholder="Confirmar Senha">
+  </div>
+</form>
+  <button (click)="CadastrarUsuario()" class="w-25 botao_cadastro">Cadastrar</button>
+</section>
