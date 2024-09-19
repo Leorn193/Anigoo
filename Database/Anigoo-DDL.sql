@@ -20,6 +20,7 @@ BEGIN
 		Qt_Episodios		INT					NOT NULL,
 		Qt_Temporadas		INT					NOT NULL,
 		Vl_Avaliacao		DECIMAL				NOT NULL,
+		Ds_Imagem			VARBINARY(MAX)		NOT NULL,
 		Qt_AnoEstreia		INT					NOT NULL,
 		Dt_Criacao			DATETIME			NOT NULL,
 		Fl_Ativo			BIT					NOT NULL,

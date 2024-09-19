@@ -20,5 +20,12 @@ namespace Anigoo.Api.Controllers
             var retorno = _animeService.BuscarAnimes();
             return Ok(retorno);
         }
+
+/*        [HttpGet]
+        public IActionResult GetAnimesInicial()
+        {
+            var retorno = _animeService.
+            return Ok(retorno);
+        }*/
     }
 }

@@ -44,14 +44,20 @@ namespace Anigoo.Biz.Services
 
                 //Acessa as avaliações do anime e calcula sua média
                 decimal soma = 0;
-                foreach (var avaliacao in anime.Avaliacao)
+                decimal avaliacaoTotal = 0;
+                
+                if(anime.Avaliacao.Count() > 0)
                 {
-                    soma += avaliacao.Vl_Avaliacao;
+                    foreach (var avaliacao in anime.Avaliacao)
+                    {
+                        soma += avaliacao.Vl_Avaliacao;
+                    }
+
+                    avaliacaoTotal = soma / anime.Avaliacao.Count;
                 }
+               
 
-                decimal avaliacaoTotal = soma / anime.Avaliacao.Count;
-
-                listaBuscarAnimeResponse.Add(new BuscarAnimeResponse(anime.Nm_Anime, listaGenero, listaStreaming, avaliacaoTotal));
+                listaBuscarAnimeResponse.Add(new BuscarAnimeResponse(anime.Nm_Anime, anime.Ds_Imagem, listaGenero, listaStreaming, avaliacaoTotal));
             }
 
             return listaBuscarAnimeResponse;

@@ -13,6 +13,7 @@ namespace Anigoo.Data.Models
         public int Qt_AnoEstreia { get; set; }
         public DateTime Dt_Criacao { get; set; }
         public bool Fl_Ativo { get; set; }
+        public string Ds_Imagem { get; set; }
 
         //Relacionamentos
 
