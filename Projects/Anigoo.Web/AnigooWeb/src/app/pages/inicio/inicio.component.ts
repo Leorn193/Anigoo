@@ -14,7 +14,7 @@ import { listaBuscarAnimeResponse } from 'src/app/core/interfaces/listaBuscarAni
 })
 export class InicioComponent implements OnInit {
 
-  listaAnime!: listaBuscarAnimeResponse;
+  listaAnime!: listaBuscarAnimeResponse[];
 
   constructor(private _animeService: AnimeService) {}
 

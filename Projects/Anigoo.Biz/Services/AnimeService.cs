@@ -20,9 +20,13 @@ namespace Anigoo.Biz.Services
 
         public List<BuscarAnimeResponse> BuscarAnimes()
         {
+            int skip = (1 - 1) * 7;
+
             List<Anime> listaAnime = _animeRepository.Listar(x => x.Include(x => x.AnimeGenero).ThenInclude(x => x.Genero)
                                                                    .Include(x => x.AnimeStreaming).ThenInclude(x => x.Streaming)
-                                                                   .Include(x => x.Avaliacao).ThenInclude(x => x.Usuario)).ToList();
+                                                                   .Include(x => x.Avaliacao).ThenInclude(x => x.Usuario))
+                                                                   .Skip(skip)
+                                                                   .Take(7).ToList();
 
             List<BuscarAnimeResponse> listaBuscarAnimeResponse = new List<BuscarAnimeResponse>();
             foreach (var anime in listaAnime)

@@ -3,53 +3,17 @@
   <div class="menu">
     <h2>Populares</h2>
     <div class="populares_lista d-flex justify-content-between">
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/Onepiece-Banner.png"/>
-        <span>One Piece</span>
-        <span>10.0</span>
-      </div>
-
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/Frieren-Banner.png"/>
-        <span>Frieren</span>
-        <span>9.0</span>
-      </div>
-
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/Naruto-Banner.png"/>
-        <span>Naruto</span>
-        <span>9.0</span>
-      </div>
-
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/TokyoRevengers-Banner.png"/>
-        <span>Tokyo Revengers</span>
-        <span>9.0</span>
-      </div>
-
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/FullMetal-Banner.png"/>
-        <span>Full Metal Alchemist</span>
-        <span>9.0</span>
-      </div>
-
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/HunterHunter-Banner.png"/>
-        <span>Hunter x Hunter</span>
-        <span>9.0</span>
-      </div>
-
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/Haikyuu-Banner.png"/>
-        <span>Haikyuu!!</span>
-        <span>9.0</span>
+      <div class="populares_item d-flex flex-column" *ngFor="let anime of listaAnime">
+        <img class="anime-image" [src]="'/assets/' + anime.caminhoImagem"/>
+        <span>{{anime.nomeAnime}}</span>
+        <span>{{anime.avaliacao}}</span>
       </div>
     </div>
 
     <h2 class="mt-5">Recomendações</h2>
     <div class="populares_lista d-flex justify-content-between">
-      <div class="populares_item d-flex flex-column">
-        <img class="anime-image" src="/assets/Onepiece-Banner.png"/>
+      <div class="populares_item d-flex flex-column" >
+        <img class="anime-image" src='/assets/Onepiece-Banner.png' />
         <span>One Piece</span>
         <span>10.0</span>
       </div>

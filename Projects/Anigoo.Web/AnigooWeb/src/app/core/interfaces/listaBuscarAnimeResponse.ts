@@ -1,7 +1,8 @@
 export interface listaBuscarAnimeResponse
 {
-  NomeAnime: string,
-  NomeGenero: string[],
-  NomeStreaming: string[],
-  Avaliacao: number,
+  nomeAnime: string,
+  nomeGenero: string[],
+  caminhoImagem: string,
+  nomeStreaming: string[],
+  avaliacao: number,
 }
