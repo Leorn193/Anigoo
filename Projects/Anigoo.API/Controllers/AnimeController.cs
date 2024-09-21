@@ -15,9 +15,9 @@ namespace Anigoo.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(int page)
         {
-            var retorno = _animeService.BuscarAnimes();
+            var retorno = _animeService.BuscarAnimes(page);
             return Ok(retorno);
         }
 

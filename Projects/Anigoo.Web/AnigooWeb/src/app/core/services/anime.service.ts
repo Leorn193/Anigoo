@@ -11,8 +11,8 @@ private readonly API = 'https://localhost:7221/Api/Anime';
 
   constructor(private http: HttpClient) { }
 
-  Get() : Observable<any>
+  Get(page: number) : Observable<any>
   {
-    return this.http.get<any>(this.API)
+    return this.http.get<any>(this.API + '?page=' + page)
   }
 }

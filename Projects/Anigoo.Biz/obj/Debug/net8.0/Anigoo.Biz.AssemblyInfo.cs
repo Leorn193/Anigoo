@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anigoo.Biz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12f53b805422bf02b7aa6f04d9fed677644290fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f687f396b2fa19522b6d63555a7bf94047942221")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anigoo.Biz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anigoo.Biz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

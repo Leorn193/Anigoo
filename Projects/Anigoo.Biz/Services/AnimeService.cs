@@ -18,9 +18,9 @@ namespace Anigoo.Biz.Services
             _animeGeneroRepository = animeGeneroRepository;
         }
 
-        public List<BuscarAnimeResponse> BuscarAnimes()
+        public List<BuscarAnimeResponse> BuscarAnimes(int page)
         {
-            int skip = (1 - 1) * 7;
+            int skip = (page - 1) * 7;
 
             List<Anime> listaAnime = _animeRepository.Listar(x => x.Include(x => x.AnimeGenero).ThenInclude(x => x.Genero)
                                                                    .Include(x => x.AnimeStreaming).ThenInclude(x => x.Streaming)

@@ -4,17 +4,19 @@ import { CadastroComponent } from "../login-cadastro/components/cadastro/cadastr
 import { HeaderComponent } from "../../shared/header/header.component";
 import { AnimeService } from 'src/app/core/services/anime.service';
 import { listaBuscarAnimeResponse } from 'src/app/core/interfaces/listaBuscarAnimeResponse';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule, CadastroComponent, HeaderComponent],
+  imports: [CommonModule, CadastroComponent, HeaderComponent, MatIconModule],
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent implements OnInit {
 
   listaAnime!: listaBuscarAnimeResponse[];
+  page: number = 1;
 
   constructor(private _animeService: AnimeService) {}
 
@@ -24,7 +26,8 @@ export class InicioComponent implements OnInit {
 
   BuscarAnimes()
   {
-    this._animeService.Get().subscribe(
+    console.log('entrou metodo');
+    this._animeService.Get(this.page).subscribe(
       (data) => {
         this.listaAnime = data;
         console.log(this.listaAnime);
@@ -33,6 +36,20 @@ export class InicioComponent implements OnInit {
         console.error('Erro ao carregar animes:', error);
       }
     )
+  }
+
+  VoltarPagina()
+  {
+    console.log('voltou');
+    this.page = this.page - 1;
+    this.BuscarAnimes();
+  }
+
+  PassarPagina()
+  {
+    console.log('avancou');
+    this.page = this.page + 1;
+    this.BuscarAnimes();
   }
 
 }
