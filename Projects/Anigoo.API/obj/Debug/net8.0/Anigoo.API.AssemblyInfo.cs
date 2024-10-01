@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Anigoo.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+153d702e52594fc9c1eb70d47ec3772bd7aeb71a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d8e56e60bf0a145c2c9cb709294b7ff05c6eb19")]
 [assembly: System.Reflection.AssemblyProductAttribute("Anigoo.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Anigoo.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

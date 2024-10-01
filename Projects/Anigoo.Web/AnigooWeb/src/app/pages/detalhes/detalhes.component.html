@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div class="detalhes">
+  <div class="d-flex">
+    <div class="imagem-coluna col-3">
+      <img [src]='"assets/" + anime.caminhoImagem' class="anime-imagem">
+      <div class="texto-imagem">
+        <span>AVALIAÇÃO</span>
+        <span>{{anime.avaliacao}}</span>
+      </div>
+      <div class="divisoria"></div>
+      <div class="texto-imagem">
+        <span>GENÊROS</span>
+        <span>{{ anime.nomeGenero.join(', ') }}</span>
+      </div>
+      <div class="divisoria"></div>
+      <div class="texto-imagem">
+        <span>AUTOR</span>
+        <span>{{anime.autor}}</span>
+      </div>
+      <div class="divisoria"></div>
+      <div class="texto-imagem">
+        <span>LANÇAMENTO</span>
+        <span>{{anime.lancamento}}</span>
+      </div>
+      <div class="divisoria"></div>
+      <div class="texto-imagem">
+        <span>TEMPORADA</span>
+        <span>{{anime.temporadas}}</span>
+      </div>
+      <div class="divisoria"></div>
+      <div class="texto-imagem">
+        <span>EPISÓDIOS</span>
+        <span>{{anime.episodios}}</span>
+      </div>
+      <div class="divisoria"></div>
+      <div class="texto-imagem">
+        <span>SITUAÇÃO</span>
+        <ng-container *ngIf="anime.finalizado; else andamento">
+          Obra Finalizada
+        </ng-container>
+        <ng-template #andamento>
+          Obra em Andamento
+        </ng-template>
+      </div>
+    </div>
+    <div class="detalhes-coluna col-9">
+      <div class="marcadores">
+        <div class="botoes">
+          <span class="nome-anime">{{anime.nomeAnime}}</span>
+          <button class="botao">Já Assistido</button>
+          <button class="botao">Adicionar a Lista</button>
+        </div>
+        <div class="estrelas-classificacao">
+          <div class="estrelas">
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+          </div>
+          <img src="assets/Livre.png">
+        </div>
+      </div>
+      <div class="onde-assistir">
+        <span>Onde Assistir: </span>
+        <img src="assets/netflix.png">
+        <img src="assets/crunchyroll.png">
+      </div>
+      <div class="sinopse">
+        <span class="titulo-sinopse">Sinopse:</span>
+        <div class="texto-sinopse" [innerHTML]="anime.sinopse">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

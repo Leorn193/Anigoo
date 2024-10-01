@@ -6,6 +6,7 @@ import { AnimeService } from 'src/app/core/services/anime.service';
 import { listaBuscarAnimeResponse } from 'src/app/core/interfaces/listaBuscarAnimeResponse';
 import { MatIconModule } from '@angular/material/icon';
 import { register as registerSwiperElements} from 'swiper/element/bundle';
+import { Router } from '@angular/router';
 
 registerSwiperElements();
 
@@ -22,7 +23,7 @@ export class InicioComponent implements OnInit {
   listaAnime!: listaBuscarAnimeResponse[];
   page: number = 1;
 
-  constructor(private _animeService: AnimeService) {}
+  constructor(private _animeService: AnimeService, private _router: Router) {}
 
   ngOnInit(): void {
     this.BuscarAnimes();
@@ -42,18 +43,8 @@ export class InicioComponent implements OnInit {
     )
   }
 
-  VoltarPagina()
+  IrDetalhes(id: number)
   {
-    console.log('voltou');
-    this.page = this.page - 1;
-    this.BuscarAnimes();
+    this._router.navigate(['detalhes/' + id])
   }
-
-  PassarPagina()
-  {
-    console.log('avancou');
-    this.page = this.page + 1;
-    this.BuscarAnimes();
-  }
-
 }

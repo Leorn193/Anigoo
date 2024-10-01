@@ -13,6 +13,11 @@ private readonly API = 'https://localhost:7221/Api/Anime';
 
   Get(page: number) : Observable<any>
   {
-    return this.http.get<any>(this.API + '?page=' + page)
+    return this.http.get<any>(this.API);
+  }
+
+  GetById(id:number) :Observable<any>
+  {
+    return this.http.get<any>(`${this.API}/${id}`)
   }
 }

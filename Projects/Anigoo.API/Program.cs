@@ -17,6 +17,7 @@ builder.Services.AddScoped<IAnimeGeneroRepository, AnimeGeneroRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 // Add controllers
+//builder.Services.AddControllers().AddJsonOptions(options => { options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve; });
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -1,4 +1,5 @@
 ﻿using Anigoo.Biz.Services;
+using Anigoo.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Anigoo.Api.Controllers
@@ -15,17 +16,20 @@ namespace Anigoo.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get(int page)
+        public IActionResult Get()
         {
-            var retorno = _animeService.BuscarAnimes(page);
+            List<BuscarAnimeResponse> retorno = _animeService.BuscarAnimes();
             return Ok(retorno);
         }
 
-/*        [HttpGet]
-        public IActionResult GetAnimesInicial()
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult GetAnimeById(int id)
         {
-            var retorno = _animeService.
-            return Ok(retorno);
-        }*/
+            BuscarAnimeResponse retorno = _animeService.BuscarAnimeById(id);
+            if(retorno.NomeAnime != null)
+                return Ok(retorno);
+            return BadRequest("ANIME NÃO ENCONTRADO");
+        }
     }
 }

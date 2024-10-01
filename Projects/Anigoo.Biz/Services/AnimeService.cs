@@ -18,7 +18,7 @@ namespace Anigoo.Biz.Services
             _animeGeneroRepository = animeGeneroRepository;
         }
 
-        public List<BuscarAnimeResponse> BuscarAnimes(int page)
+        public List<BuscarAnimeResponse> BuscarAnimes()
         {
 
             List<Anime> listaAnime = _animeRepository.Listar(x => x.Include(x => x.AnimeGenero).ThenInclude(x => x.Genero)
@@ -26,43 +26,23 @@ namespace Anigoo.Biz.Services
                                                                    .Include(x => x.Avaliacao).ThenInclude(x => x.Usuario))
                                                                    .Take(14).ToList();
 
-            List<BuscarAnimeResponse> listaBuscarAnimeResponse = new List<BuscarAnimeResponse>();
-            foreach (var anime in listaAnime)
-            {
-                //Acessa os gêneros do anime
-                List<string> listaGenero = new();
-                foreach (var animeGenero in anime.AnimeGenero)
-                {
-                    listaGenero.Add(animeGenero.Genero.Nm_Genero);
-                }
-
-                //Acessa os streamings do anime
-                List<string> listaStreaming = new();
-                foreach (var animeStreaming in anime.AnimeStreaming)
-                {
-                    if(animeStreaming.Fl_Ativo == true)
-                        listaStreaming.Add(animeStreaming.Streaming.Nm_Streaming);
-                }
-
-                //Acessa as avaliações do anime e calcula sua média
-                decimal soma = 0;
-                decimal avaliacaoTotal = 0;
-                
-                if(anime.Avaliacao.Count() > 0)
-                {
-                    foreach (var avaliacao in anime.Avaliacao)
-                    {
-                        soma += avaliacao.Vl_Avaliacao;
-                    }
-
-                    avaliacaoTotal = soma / anime.Avaliacao.Count;
-                }
-               
-
-                listaBuscarAnimeResponse.Add(new BuscarAnimeResponse(anime.Nm_Anime, anime.Ds_Imagem, listaGenero, listaStreaming, avaliacaoTotal));
-            }
+            List<BuscarAnimeResponse> listaBuscarAnimeResponse = Mapper.AnimeMapper.Converte(listaAnime);
 
             return listaBuscarAnimeResponse;
         }
+
+        public BuscarAnimeResponse BuscarAnimeById(int id)
+        {
+            Anime? anime = _animeRepository.Listar(x => x.Include(x => x.AnimeGenero).ThenInclude(x => x.Genero)
+                                                                   .Include(x => x.AnimeStreaming).ThenInclude(x => x.Streaming)
+                                                                   .Include(x => x.Avaliacao).ThenInclude(x => x.Usuario)).Where(x => x.Id_Anime == id).FirstOrDefault();
+            if(anime != null)
+            {  
+                BuscarAnimeResponse animeResponse = Mapper.AnimeMapper.Converte(anime);
+                return animeResponse;
+            }
+            return new BuscarAnimeResponse();
+        }
+
     }
 }

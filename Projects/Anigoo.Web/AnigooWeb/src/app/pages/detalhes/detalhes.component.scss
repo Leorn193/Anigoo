@@ -1,0 +1,102 @@
+@import '/src/styles.scss';
+
+.detalhes
+{
+  color: $cor-secundaria;
+  padding: 3% 10%;
+  font-family: 'Roboto';
+}
+.imagem-coluna
+{
+  display: flex;
+  flex-direction: column;
+}
+.anime-imagem
+{
+  width: 80%;
+  margin-bottom: 1%;
+}
+.texto-imagem
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+  width: 80%;
+}
+.divisoria
+{
+  width: 80%;
+  border-top: 2px solid $cor-primaria;
+  margin: 5px 0
+}
+// .detalhes-coluna
+// {
+
+// }
+.marcadores
+{
+  display: flex;
+  width: 100%;
+}
+  .nome-anime
+  {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .botoes
+  {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    width: 80%;
+  }
+    .botao
+    {
+      background-color: $cor-primaria;
+      color: $cor-secundaria;
+      border: none;
+      padding: 5px 15px;
+      font-weight: 500;
+    }
+      .botao:hover
+      {
+        background-color: $cor-terciaria;
+      }
+
+  .estrelas-classificacao
+  {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5%;
+    width: 20%;
+  }
+    .estrelas
+    {
+      display: flex;
+    }
+
+.onde-assistir
+{
+  margin-top: 3%;
+  width: 100%;
+  font-size: 20px;
+  display: flex;
+  gap: 1%;
+  font-weight: 600;
+}
+.sinopse
+{
+  margin-top: 3%;
+  text-align: justify;
+}
+.titulo-sinopse
+{
+  font-size: 20px;
+  font-weight: 600;
+}
+.texto-sinopse
+{
+  text-align: justify;
+  margin-top: 1%;
+}

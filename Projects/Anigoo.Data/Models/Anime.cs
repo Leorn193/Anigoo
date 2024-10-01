@@ -8,12 +8,15 @@ namespace Anigoo.Data.Models
         public int Id_Anime { get; set; }
         public string Nm_Anime { get; set; }
         public string Nm_Autor { get; set; }
+        public int Cd_Classificacao { get; set; }
         public int Qt_Episodios { get; set; }
         public int Qt_Temporadas { get; set; }
+        public string Ds_Imagem { get; set; }
+        public string Ds_Sinopse { get; set; }
         public int Qt_AnoEstreia { get; set; }
+        public bool Fl_Finalizado { get; set; }
         public DateTime Dt_Criacao { get; set; }
         public bool Fl_Ativo { get; set; }
-        public string Ds_Imagem { get; set; }
 
         //Relacionamentos
 

@@ -5,13 +5,13 @@
     <swiper-container class="swiper-container" slides-per-view="1" navigation=true loop="true" speed="700" style="--swiper-theme-color: #f6f6f6;">
       <swiper-slide class="populares_lista d-flex align-items-center">
         <div *ngFor="let anime of listaAnime | slice:0:7" class="populares_item d-flex flex-column">
-          <img class="anime-image" [src]='"assets/" + anime.caminhoImagem'/>
+          <img class="anime-image" [src]='"assets/" + anime.caminhoImagem' (click)="IrDetalhes(anime.id)"/>
           <span class="pt-1 nome-anime">{{ anime.nomeAnime }}</span>
         </div>
       </swiper-slide>
       <swiper-slide class="populares_lista d-flex align-items-center">
         <div *ngFor="let anime of listaAnime | slice:7:14" class="populares_item d-flex flex-column">
-          <img class="anime-image" [src]='"assets/" + anime.caminhoImagem'/>
+          <img class="anime-image" [src]='"assets/" + anime.caminhoImagem' (click)="IrDetalhes(anime.id)"/>
           <span class="pt-1 nome-anime">{{ anime.nomeAnime }}</span>
         </div>
       </swiper-slide>
