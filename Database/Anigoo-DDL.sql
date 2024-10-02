@@ -17,7 +17,7 @@ BEGIN
 		Id_Anime			INT	IDENTITY		NOT NULL,
 		Nm_Anime			VARCHAR(300)		NOT NULL,
 		Nm_Autor			VARCHAR(300)		NOT NULL,
-		Cd_Classificacao	INT					NOT NULL,
+		Cd_Classificacao	VARCHAR(5)			NOT NULL,
 		Qt_Episodios		INT					NOT NULL,
 		Qt_Temporadas		INT					NOT NULL,
 		Ds_Imagem			VARCHAR(100)		NOT NULL,

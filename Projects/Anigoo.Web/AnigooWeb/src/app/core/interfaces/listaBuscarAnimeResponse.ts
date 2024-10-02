@@ -6,7 +6,7 @@ export interface listaBuscarAnimeResponse
   lancamento: number,
   temporadas: number,
   episodios: number,
-  classificacao: number,
+  classificacao: string,
   finalizado: boolean,
   sinopse: string,
   caminhoImagem: string,

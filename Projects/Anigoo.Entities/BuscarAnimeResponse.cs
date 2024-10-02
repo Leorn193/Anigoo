@@ -7,7 +7,7 @@
             
         }
 
-        public BuscarAnimeResponse(int id, string nomeAnime, string autor, int lancamento, int temporadas, int episodios, int classificacao, bool finalizado, string sinopse, string caminhoImagem, List<string> nomeGenero, List<string> nomeStreaming, decimal avaliacao)
+        public BuscarAnimeResponse(int id, string nomeAnime, string autor, int lancamento, int temporadas, int episodios, string classificacao, bool finalizado, string sinopse, string caminhoImagem, List<string> nomeGenero, List<string> nomeStreaming, decimal avaliacao)
         {
             Id = id;
             NomeAnime = nomeAnime;
@@ -30,7 +30,7 @@
         public int Lancamento { get; set; }
         public int Temporadas { get; set; }
         public int Episodios { get; set; }
-        public int Classificacao { get; set; }
+        public string Classificacao { get; set; }
         public bool Finalizado { get; set; }
         public string Sinopse { get; set; }
         public string CaminhoImagem { get; set; }

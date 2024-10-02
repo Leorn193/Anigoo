@@ -38,10 +38,11 @@
   display: flex;
   width: 100%;
 }
-  .nome-anime
+  .titulo-anime
   {
     font-size: 36px;
     font-weight: 600;
+    margin-right: 2%;
   }
   .botoes
   {
@@ -76,27 +77,58 @@
       display: flex;
     }
 
+.titulo
+{
+  font-size: 26px;
+  font-weight: 600;
+}
 .onde-assistir
 {
   margin-top: 3%;
   width: 100%;
-  font-size: 20px;
   display: flex;
   gap: 1%;
-  font-weight: 600;
+  align-items: center;
+}
+.streaming-imagem
+{
+  width: 50px;
+  height: 50px;
 }
 .sinopse
 {
   margin-top: 3%;
   text-align: justify;
 }
-.titulo-sinopse
-{
-  font-size: 20px;
-  font-weight: 600;
-}
 .texto-sinopse
 {
+  font-size: 18px;
   text-align: justify;
   margin-top: 1%;
+}
+.semelhantes
+{
+  margin-top: 3%;
+}
+.populares_lista
+{
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  margin-top: 1%;
+}
+.populares_item
+{
+  display: flex;
+  flex-direction: column;
+  width: 12%;
+  align-items: center;
+}
+.anime-image {
+  width: 100%;
+  cursor: pointer;
+}
+.nome-anime
+{
+  font-size: 14px;
 }

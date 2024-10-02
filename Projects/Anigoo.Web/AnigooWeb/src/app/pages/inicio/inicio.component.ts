@@ -1,4 +1,4 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CadastroComponent } from "../login-cadastro/components/cadastro/cadastro.component";
 import { HeaderComponent } from "../../shared/header/header.component";
@@ -32,7 +32,7 @@ export class InicioComponent implements OnInit {
 
   BuscarAnimes()
   {
-    this._animeService.Get(this.page).subscribe(
+    this._animeService.Get().subscribe(
       (data) => {
         this.listaAnime = data;
         console.log(this.listaAnime);
